@@ -6,15 +6,14 @@ import { stripe } from '@/libs/stripe';
 import { getURL } from '@/libs/helpers';
 import { createOrRetrieveCustomer } from '@/libs/supabaseAdmin';
 
-export async function POST(
-  request: Request
-) {
+export async function POST(request: Request) {
   const { price, quantity = 1, metadata = {} } = await request.json();
 
   try {
-    const supabase = createRouteHandlerClient({ 
+    const supabase = createRouteHandlerClient({
       cookies
-      });      const {
+    });
+    const {
       data: { user }
     } = await supabase.auth.getUser();
 
@@ -38,7 +37,7 @@ export async function POST(
       subscription_data: {
         trial_from_plan: true,
         metadata
-      },
+      } as any, // Type assertion to inform TypeScript about trial_from_plan
       success_url: `${getURL()}/account`,
       cancel_url: `${getURL()}/`
     });
