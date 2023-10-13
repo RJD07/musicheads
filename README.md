@@ -38,4 +38,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 =======
 # Music Heads 🎵
  A Music Streaming Website
->>>>>>> 630c664ed5d36efb6a307a64ffdda601488186dd
+DEMO >>>>>>> [630c664ed5d36efb6a307a64ffdda601488186dd](https://musicheads-five.vercel.app/)https://musicheads-five.vercel.app/
