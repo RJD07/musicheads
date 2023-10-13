@@ -279,9 +279,9 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
           />
           <button onClick={toggleShuffle}>
             {isButtonClicked ? (
-              <FaRandom size={18} color="red" /> // Change color to blue when button is clicked
+              <FaRandom size={18}  /> // Change color to blue when button is clicked
             ) : (
-              <FaRandom size={18} />
+              <FaRandom size={18} color="red"/>
             )}
           </button>
         </div>
@@ -359,9 +359,9 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
 
           <button onClick={toggleShuffle}>
             {isButtonClicked ? (
-              <FaRandom size={18} color="red" /> // Change color to blue when button is clicked
+              <FaRandom size={18}  /> // Change color to blue when button is clicked
             ) : (
-              <FaRandom size={18} />
+              <FaRandom size={18} color="red"/>
             )}
           </button>
 
