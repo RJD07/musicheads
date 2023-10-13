@@ -1,5 +1,6 @@
 import { Figtree } from 'next/font/google'
-
+import React from 'react';
+import { ShuffleProvider } from '@/components/ShuffleContext';
 import getSongsByUserId from '@/actions/getSongsByUserId'
 import getActiveProductsWithPrices from '@/actions/getActiveProductsWithPrices'
 import Sidebar from '@/components/Sidebar'
@@ -40,7 +41,9 @@ export default async function RootLayout({
             <Sidebar songs={userSongs}>
               {children}
             </Sidebar>
+            <ShuffleProvider>
             <Player />
+            </ShuffleProvider>
           </UserProvider>
         </SupabaseProvider>
       </body>
