@@ -16,9 +16,6 @@ const config: Config = {
 
       screens: {
 
-        'md': '910px',
-
-
         'sm': {'max': '500px'},
 
       },

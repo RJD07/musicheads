@@ -215,9 +215,13 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
     // ... your JSX remains the same
     <div className="grid grid-cols-2 md:grid-cols-3 h-full">
       <div className="flex w-full justify-start">
-        <div className="flex items-center gap-x-4">
-          <MediaItem data={song} />
-          <LikeButton songId={song.id} />
+        <div className="flex items-center gap-x-4 ">
+          <span className="sm:w-[60px]">
+            <MediaItem data={song} />
+          </span>
+          <span className="sm:hidden">
+            <LikeButton songId={song.id} />
+          </span>
         </div>
       </div>
 
@@ -279,9 +283,9 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
           />
           <button onClick={toggleShuffle}>
             {isButtonClicked ? (
-              <FaRandom size={18}  /> // Change color to blue when button is clicked
+              <FaRandom size={18} /> // Change color to blue when button is clicked
             ) : (
-              <FaRandom size={18} color="red"/>
+              <FaRandom size={18} color="red" />
             )}
           </button>
         </div>
@@ -359,9 +363,9 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
 
           <button onClick={toggleShuffle}>
             {isButtonClicked ? (
-              <FaRandom size={18}  /> // Change color to blue when button is clicked
+              <FaRandom size={18} /> // Change color to blue when button is clicked
             ) : (
-              <FaRandom size={18} color="red"/>
+              <FaRandom size={18} color="red" />
             )}
           </button>
 
